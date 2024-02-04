@@ -1,0 +1,145 @@
+@import 'variables'
+
+*
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+
+body
+    display: flex
+    flex-direction: column
+    align-items: center
+    font-family: 'Manrope', sans-serif
+    font-size: 13px
+    background-color: $light-grayish-blue
+
+.component
+    display: flex
+    flex-direction: column
+    max-width: 600px
+    margin: 50px 20px 0 20px
+    border-radius: 1.2rem
+    background-color: #fff
+
+.component__image
+    background-image: url("../images/drawers.jpg")
+    background-size: cover
+    width: 100%
+    height: 250px
+    border-radius: 12px 12px 0 0
+
+.inside-wrapper
+    position: relative
+    padding: 30px 30px 10px 30px
+
+.component__title
+    font-size: 18px
+    color: $very-dark-grayish-blue
+
+.component__description
+    margin-top: 15px
+    font-size: 13px
+    color: $desaturated-dark-blue
+
+.component__author
+    position: relative
+    margin-top: 2.5rem
+    display: flex
+    justify-content: space-between
+    align-items: center
+
+.component__author-img
+    width: 45px
+    border-radius: 50%
+
+.component__author-data
+    position: absolute
+    left: 65px
+
+.component__author-name
+    font-weight: 700
+    font-size: 13px
+    color: $very-dark-grayish-blue
+
+.component__author-date
+    font-size: 13px
+    color: $grayish-blue
+
+.share
+    position: absolute
+    right: 0
+    display: flex
+    justify-content: center
+    align-items: center
+    background-color: $light-grayish-blue
+    width: 35px
+    height: 35px
+    border-radius: 50%
+    cursor: pointer
+    transition: background-color .3s
+    z-index: 1
+
+.share:hover
+    background-color: $desaturated-dark-blue
+
+.share__svg-path
+    transition: fill .3s
+
+.share:hover .share__svg-path
+    fill: $light-grayish-blue
+
+.speech-bubble
+    position: absolute
+    background-color: red
+    bottom: -10px
+    left: -30px
+    width: calc(100% + 60px)
+    height: 65px
+    z-index: 0
+    opacity: 0
+    border-radius: 0 0 12px 12px
+    background: $very-dark-grayish-blue
+    display: flex
+    justify-content: flex-start
+    gap: 20px
+    align-items: center
+    transition: opacity .3s
+
+.speech-bubble__share-btn
+    text-transform: uppercase
+    margin-left: 30px
+    font-size: 15px
+    letter-spacing: 4px
+    color: $grayish-blue
+    cursor: pointer
+    transition: color .3s
+
+.speech-bubble__share-btn:hover
+    color: $light-grayish-blue
+
+.speech-bubble__btn
+    display: block
+    padding: 5px
+    opacity: 0.8
+    cursor: pointer
+    transition: transform .3s, opacity .3s
+
+.speech-bubble__btn:hover
+    transform: scale(1.15)
+    opacity: 1
+
+.display
+    opacity: 1
+
+footer
+    margin-top: 50px
+
+@media (max-width: 768px)
+    .component__title
+        font-size: 17px
+
+@media (max-width: 576px)
+    .component__title
+        font-size: 16px
+    .speech-bubble
+        gap: 7px

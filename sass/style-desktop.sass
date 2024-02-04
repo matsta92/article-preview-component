@@ -1,0 +1,147 @@
+@import 'variables'
+
+*
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+    font-size: 10px
+
+body
+    display: flex
+    justify-content: center
+    align-items: center
+    font-family: 'Manrope', sans-serif
+    font-size: 1.3rem
+    height: 100vh
+    background-color: $light-grayish-blue
+
+
+.component
+    display: flex
+    width: 800px
+    height: 320px
+    border-radius: 1.2rem
+    background-color: #fff
+
+.component__image
+    background-image: url("../images/drawers.jpg")
+    background-size: cover
+    width: 40%
+    border-radius: 1.2rem 0 0 1.2rem
+
+.inside-wrapper
+    width: 60%
+    padding: 3.5rem
+
+.component__title
+    font-size: 2.4rem
+    color: $very-dark-grayish-blue
+
+.component__description
+    margin-top: 1.1rem
+    font-size: 1.5rem
+    color: $desaturated-dark-blue
+
+.component__author
+    position: relative
+    margin-top: 2.5rem
+    display: flex
+    justify-content: space-between
+    align-items: center
+
+.component__author-img
+    width: 50px
+    border-radius: 50%
+
+.component__author-data
+    position: absolute
+    left: 65px
+
+.component__author-name
+    font-weight: 700
+    font-size: 1.5rem
+    color: $very-dark-grayish-blue
+
+.component__author-date
+    font-size: 1.3rem
+    color: $grayish-blue
+
+.share
+    position: absolute
+    right: 0
+    display: flex
+    justify-content: center
+    align-items: center
+    background-color: $light-grayish-blue
+    width: 35px
+    height: 35px
+    border-radius: 50%
+    cursor: pointer
+    transition: background-color .3s
+
+.share:hover
+    background-color: $desaturated-dark-blue
+
+.share__svg-path
+    transition: fill .3s
+
+.share:hover .share__svg-path
+    fill: $light-grayish-blue
+
+.speech-bubble
+    position: relative
+    padding: 0 30px
+    bottom: 90px
+    width: 250px
+    height: 60px
+    left: 107px
+    border-radius: 1.2rem
+    background: $very-dark-grayish-blue
+    display: flex
+    justify-content: space-around
+    align-items: center
+    opacity: 0
+    transition: opacity .3s
+
+.speech-bubble:after
+   content: ""
+   position: absolute
+   top: 100%
+   left: 50%
+   transform: translateX(-50%)
+   border-top: 20px solid $very-dark-grayish-blue
+   border-top-color: $very-dark-grayish-blue
+   border-left: 20px solid transparent
+   border-right: 20px solid transparent
+
+.speech-bubble__share-btn
+    text-transform: uppercase
+    font-size: 1.5rem
+    letter-spacing: 4px
+    color: $grayish-blue
+    cursor: pointer
+    transition: color .3s
+
+.speech-bubble__share-btn:hover
+    color: $light-grayish-blue
+
+.speech-bubble__btn
+    display: block
+    padding: 5px
+    opacity: 0.8
+    cursor: pointer
+    transition: transform .3s, opacity .3s
+
+.speech-bubble__btn:hover
+    transform: scale(1.15)
+    opacity: 1
+
+.speech-bubble-mobile
+    display: none
+     
+.display 
+    opacity: 1
+
+footer
+    position: absolute
+    bottom: 1rem
